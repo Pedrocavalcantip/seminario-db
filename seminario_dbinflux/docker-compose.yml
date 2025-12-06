@@ -1,0 +1,16 @@
+version: "3"
+services:
+  influxdb:
+    image: influxdb:2.7
+    container_name: influxdb_seminario
+    ports:
+      - "8086:8086"
+    volumes:
+      - ./influxdb2-data:/var/lib/influxdb2
+      - ./influxdb2-config:/etc/influxdb2
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=admin
+      - DOCKER_INFLUXDB_INIT_PASSWORD=senhaforte123
+      - DOCKER_INFLUXDB_INIT_ORG=ufrpe
+      - DOCKER_INFLUXDB_INIT_BUCKET=financeiro
