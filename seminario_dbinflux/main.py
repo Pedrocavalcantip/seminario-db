@@ -5,9 +5,9 @@ from datetime import datetime, timedelta, UTC
 from influxdb_client import InfluxDBClient, Point
 from influxdb_client.client.write_api import SYNCHRONOUS
 
-token = "6udfe8gCb-dvi1i6UiINdlGLj4KxvK4fA5KOHU81FZVSxswPyQ15s_12-82VDom4CPO3V_nsae5zTEtdxOAsGw=="
+token = "1U2X5D93MFnKPJTsuM7w5-UxMxi0FOvJLWDorqTaD_oUCCrd39YCe_qJpf_sb_S1bi8Pkj20GzmgKsox0PZElw=="
 org = "ufrpe"
-bucket = "financeiro"
+bucket = "financeiro_seminario"
 
 client = InfluxDBClient(url="http://localhost:8086", token=token, org=org)
 write_api = client.write_api(write_options=SYNCHRONOUS)

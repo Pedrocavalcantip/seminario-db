@@ -13,4 +13,4 @@ services:
       - DOCKER_INFLUXDB_INIT_USERNAME=admin
       - DOCKER_INFLUXDB_INIT_PASSWORD=senhaforte123
       - DOCKER_INFLUXDB_INIT_ORG=ufrpe
-      - DOCKER_INFLUXDB_INIT_BUCKET=financeiro
+      - DOCKER_INFLUXDB_INIT_BUCKET=financeiro_seminario
