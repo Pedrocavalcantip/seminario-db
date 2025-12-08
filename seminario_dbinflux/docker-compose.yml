@@ -15,6 +15,3 @@ services:
       - DOCKER_INFLUXDB_INIT_ORG=ufrpe
       - DOCKER_INFLUXDB_INIT_BUCKET=financeiro
 
-volumes:
-  influxdb_data:
-  influxdb_config:
