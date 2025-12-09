@@ -51,7 +51,6 @@ try:
         preco_btc *= (1 + fator_btc)
         preco_eth *= (1 + fator_eth)
 
-        # 3. Envia para o InfluxDB com timestamp real
         p_btc = (
             Point("cotacao")
             .tag("ativo", "BTC")
@@ -70,8 +69,7 @@ try:
 
         write_api.write(bucket=bucket, org=org, record=[p_btc, p_eth])
 
-        # Log no terminal
-        seta = "⬆️" if fator_btc > 0 else "⬇️"
+        seta = "⬆(+)" if fator_btc > 0 else "⬇(-)"
         print(f"{seta} BTC: ${preco_btc:.2f} | ETH: ${preco_eth:.2f}")
 
         # Avança o tempo + 1 segundo
